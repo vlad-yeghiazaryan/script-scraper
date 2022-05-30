@@ -38,8 +38,11 @@ class ScriptRunner():
         scrapydo.default_settings.update(main_settings)
         self.custom_settings.update(other_settings)
         scrapydo.default_settings.update(self.custom_settings)
-        if not self.log:
+        if self.log:
             logging.basicConfig(level=logging.DEBUG)
+        else:
+            logging.basicConfig(level=logging.WARNING)
+            # logging.getLogger('scrapy').propagate = False
         results = scrapydo.run_spider(SimpleBot, request=request)
         print('Massage:', 'Scraping complete.')
         return results
