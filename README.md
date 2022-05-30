@@ -41,7 +41,8 @@ request = {
           }
         }
       }
-    }
+    },
+    "next_page": ".next a"
   }
 }
 crawler = ScriptRunner(delay=1, log=False, output='data.json')

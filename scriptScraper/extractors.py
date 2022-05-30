@@ -41,8 +41,8 @@ class ScriptRunner():
         if self.log:
             logging.basicConfig(level=logging.DEBUG)
         else:
+            logging.getLogger('scrapy').propagate = False
             logging.basicConfig(level=logging.WARNING)
-            # logging.getLogger('scrapy').propagate = False
         results = scrapydo.run_spider(SimpleBot, request=request)
         print('Massage:', 'Scraping complete.')
         return results
