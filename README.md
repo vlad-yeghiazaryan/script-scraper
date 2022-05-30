@@ -11,7 +11,7 @@ https://github.com/vlad-yeghiazaryan/script-scraper
 
 You can also install it with pip, by running:
 ```sh
-pip install script-scraper
+pip install script-scraper-alpha
 ```
 ## Working example
 ```python
