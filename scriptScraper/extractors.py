@@ -39,6 +39,7 @@ class ScriptRunner():
         self.custom_settings.update(other_settings)
         scrapydo.default_settings.update(self.custom_settings)
         if self.log:
+            logging.getLogger('scrapy').propagate = True
             logging.basicConfig(level=logging.DEBUG)
         else:
             logging.getLogger('scrapy').propagate = False
